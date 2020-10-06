@@ -11,9 +11,11 @@ import { IUser } from '../../../ui/interfaces/user';
 @Component({
   selector: 'page-payments',
   templateUrl: './payments.component.html',
-  styleUrls: ['./payments.component.scss']
+  styleUrls: ['./payments.component.scss'],
 })
-export class PagePaymentsComponent extends BasePageComponent implements OnInit, OnDestroy {
+export class PagePaymentsComponent
+  extends BasePageComponent
+  implements OnInit, OnDestroy {
   payments: any[];
   paymentForm: FormGroup;
   doctors: IUser[];
@@ -30,13 +32,13 @@ export class PagePaymentsComponent extends BasePageComponent implements OnInit, 
       title: 'Payments',
       breadcrumbs: [
         {
-          title: 'Medicine',
-          route: 'default-dashboard'
+          title: 'Agreements',
+          route: 'default-dashboard',
         },
         {
-          title: 'Payments'
-        }
-      ]
+          title: 'Payments',
+        },
+      ],
     };
     this.payments = [];
     this.doctors = [];
@@ -54,14 +56,19 @@ export class PagePaymentsComponent extends BasePageComponent implements OnInit, 
   }
 
   // open modal window
-  openModal<T>(body: Content<T>, header: Content<T> = null, footer: Content<T> = null, options: any = null) {
+  openModal<T>(
+    body: Content<T>,
+    header: Content<T> = null,
+    footer: Content<T> = null,
+    options: any = null
+  ) {
     this.initPaymentForm();
 
     this.modal.open({
       body: body,
       header: header,
       footer: footer,
-      options: options
+      options: options,
     });
   }
 
@@ -81,7 +88,7 @@ export class PagePaymentsComponent extends BasePageComponent implements OnInit, 
       charges: ['', Validators.required],
       tax: ['', Validators.required],
       discount: ['', Validators.required],
-      total: ['', Validators.required]
+      total: ['', Validators.required],
     });
   }
 

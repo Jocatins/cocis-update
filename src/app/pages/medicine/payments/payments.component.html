@@ -1,3 +1,5 @@
+<!-- 1st Card -->
+
 <tc-card class="mb-0">
   <tc-table
     [rows]="payments"
@@ -5,36 +7,70 @@
     [pagination]="true"
     [itemsPerPage]="15"
   >
-    <tc-table-col [columnTitle]="'Bill NO'" [columnName]="'billNo'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Bill NO'"
+      [columnName]="'billNo'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <span [tcColor]="'#a5a5a5'">{{ value }}</span>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Patient'" [columnName]="'patient'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Agreement'"
+      [columnName]="'patient'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <strong>{{ value }}</strong>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Doctor'" [columnName]="'doctor'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Agent'"
+      [columnName]="'doctor'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <strong>{{ value }}</strong>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Date'" [columnName]="'billDate'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Date'"
+      [columnName]="'billDate'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <span class="nowrap" [tcColor]="'#a5a5a5'">{{ value }}</span>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Charges'" [columnName]="'charges'" [enableSorting]="true"></tc-table-col>
-    <tc-table-col [columnTitle]="'Tax'" [columnName]="'tax'" [enableSorting]="true"></tc-table-col>
-    <tc-table-col [columnTitle]="'Discount'" [columnName]="'discount'" [enableSorting]="true"></tc-table-col>
-    <tc-table-col [columnTitle]="'Total'" [columnName]="'total'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Charges'"
+      [columnName]="'charges'"
+      [enableSorting]="true"
+    ></tc-table-col>
+    <tc-table-col
+      [columnTitle]="'Tax'"
+      [columnName]="'tax'"
+      [enableSorting]="true"
+    ></tc-table-col>
+    <tc-table-col
+      [columnTitle]="'Discount'"
+      [columnName]="'discount'"
+      [enableSorting]="true"
+    ></tc-table-col>
+    <tc-table-col
+      [columnTitle]="'Total'"
+      [columnName]="'total'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <strong>{{ value }}</strong>
       </ng-template>
     </tc-table-col>
   </tc-table>
 </tc-card>
+
+<!-- End of first card -->
 
 <div class="add-action-box">
   <button
@@ -56,11 +92,16 @@
       </tc-form-group>
 
       <tc-form-group>
-        <tc-input [placeholder]="'Patient'" formControlName="patient"></tc-input>
+        <tc-input [placeholder]="'Field'" formControlName="patient"></tc-input>
       </tc-form-group>
 
       <tc-form-group>
-        <tc-autocomplete [placeholder]="'Doctor'" [data]="doctors" [key]="'name'" formControlName="doctor"></tc-autocomplete>
+        <tc-autocomplete
+          [placeholder]="'Contractor'"
+          [data]="doctors"
+          [key]="'name'"
+          formControlName="doctor"
+        ></tc-autocomplete>
       </tc-form-group>
 
       <tc-form-group>
@@ -68,7 +109,10 @@
       </tc-form-group>
 
       <tc-form-group>
-        <tc-input [placeholder]="'Charges'" formControlName="charges"></tc-input>
+        <tc-input
+          [placeholder]="'Charges'"
+          formControlName="charges"
+        ></tc-input>
       </tc-form-group>
 
       <tc-form-group>
@@ -76,7 +120,10 @@
       </tc-form-group>
 
       <tc-form-group>
-        <tc-input [placeholder]="'Discount'" formControlName="discount"></tc-input>
+        <tc-input
+          [placeholder]="'Discount'"
+          formControlName="discount"
+        ></tc-input>
       </tc-form-group>
 
       <tc-form-group class="mb-0">
@@ -87,8 +134,20 @@
 
   <ng-template #modalFooter>
     <div class="actions justify-content-between">
-      <button tc-button [type]="'button'" [view]="'error'" (click)="closeModal()">Cancel</button>
-      <button tc-button [view]="'info'" [disabled]="paymentForm.invalid" (click)="addPayment(paymentForm)">
+      <button
+        tc-button
+        [type]="'button'"
+        [view]="'error'"
+        (click)="closeModal()"
+      >
+        Cancel
+      </button>
+      <button
+        tc-button
+        [view]="'info'"
+        [disabled]="paymentForm.invalid"
+        (click)="addPayment(paymentForm)"
+      >
         Add payment
       </button>
     </div>

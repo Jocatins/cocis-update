@@ -15,9 +15,11 @@ import { TCModalService } from '../../../ui/services/modal/modal.service';
 @Component({
   selector: 'page-patients',
   templateUrl: './patients.component.html',
-  styleUrls: ['./patients.component.scss']
+  styleUrls: ['./patients.component.scss'],
 })
-export class PagePatientsComponent extends BasePageComponent implements OnInit, OnDestroy {
+export class PagePatientsComponent
+  extends BasePageComponent
+  implements OnInit, OnDestroy {
   patients: IPatient[];
   patientForm: FormGroup;
   gender: IOption[];
@@ -38,34 +40,34 @@ export class PagePatientsComponent extends BasePageComponent implements OnInit, 
       title: 'Contractors',
       breadcrumbs: [
         {
-          title: 'Medicine',
-          route: 'default-dashboard'
+          title: 'Agreements',
+          route: 'default-dashboard',
         },
         {
-          title: 'Contractors'
-        }
-      ]
+          title: 'Contractors',
+        },
+      ],
     };
     this.patients = [];
     this.gender = [
       {
         label: 'Male',
-        value: 'male'
+        value: 'male',
       },
       {
         label: 'Female',
-        value: 'female'
-      }
+        value: 'female',
+      },
     ];
     this.status = [
       {
         label: 'Approved',
-        value: 'approved'
+        value: 'approved',
       },
       {
         label: 'Pending',
-        value: 'pending'
-      }
+        value: 'pending',
+      },
     ];
     this.defaultAvatar = 'assets/content/anonymous-400.jpg';
     this.currentAvatar = this.defaultAvatar;
@@ -74,7 +76,7 @@ export class PagePatientsComponent extends BasePageComponent implements OnInit, 
   ngOnInit() {
     super.ngOnInit();
 
-    this.store.select('patients').subscribe(patients => {
+    this.store.select('patients').subscribe((patients) => {
       if (patients && patients.length) {
         this.patients = patients;
 
@@ -93,14 +95,19 @@ export class PagePatientsComponent extends BasePageComponent implements OnInit, 
   }
 
   // open modal window
-  openModal<T>(body: Content<T>, header: Content<T> = null, footer: Content<T> = null, row: IPatient) {
+  openModal<T>(
+    body: Content<T>,
+    header: Content<T> = null,
+    footer: Content<T> = null,
+    row: IPatient
+  ) {
     this.initPatientForm(row);
 
     this.modal.open({
       body: body,
       header: header,
       footer: footer,
-      options: null
+      options: null,
     });
   }
 
@@ -134,9 +141,15 @@ export class PagePatientsComponent extends BasePageComponent implements OnInit, 
       number: [data.number ? data.number : '', Validators.required],
       age: [data.age ? data.age : '', Validators.required],
       lastVisit: [data.lastVisit ? data.lastVisit : '', Validators.required],
-      gender: [data.gender ? data.gender.toLowerCase() : '', Validators.required],
+      gender: [
+        data.gender ? data.gender.toLowerCase() : '',
+        Validators.required,
+      ],
       address: [data.address ? data.address : '', Validators.required],
-      status: [data.status ? data.status.toLowerCase() : '', Validators.required]
+      status: [
+        data.status ? data.status.toLowerCase() : '',
+        Validators.required,
+      ],
     });
   }
 
@@ -145,7 +158,7 @@ export class PagePatientsComponent extends BasePageComponent implements OnInit, 
     if (form.valid) {
       let newPatient: IPatient = form.value;
       this.postData('https://reqres.in/api/users', 'test', newPatient);
-      if(this.test) {
+      if (this.test) {
         console.log(this.test);
       }
       this.store.dispatch(new PatientsActions.Edit(newPatient));

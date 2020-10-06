@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { BasePageComponent } from '../../base-page';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -10,9 +16,11 @@ import { IUser } from '../../../ui/interfaces/user';
 @Component({
   selector: 'page-appointments',
   templateUrl: './appointments.component.html',
-  styleUrls: ['./appointments.component.scss']
+  styleUrls: ['./appointments.component.scss'],
 })
-export class PageAppointmentsComponent extends BasePageComponent implements OnInit, OnDestroy {
+export class PageAppointmentsComponent
+  extends BasePageComponent
+  implements OnInit, OnDestroy {
   @ViewChild('modalBody') modalBody: ElementRef<any>;
   @ViewChild('modalFooter') modalFooter: ElementRef<any>;
 
@@ -31,16 +39,16 @@ export class PageAppointmentsComponent extends BasePageComponent implements OnIn
     super(store, httpSv);
 
     this.pageData = {
-      title: 'Lifiting Operations',
+      title: 'Lifting Operations',
       breadcrumbs: [
         {
-          title: 'Medicine',
-          route: 'default-dashboard'
+          title: 'Contract',
+          route: 'default-dashboard',
         },
         {
-          title: 'Appointments'
-        }
-      ]
+          title: 'Agreements',
+        },
+      ],
     };
     this.appointments = [];
     this.doctors = [];
@@ -60,13 +68,18 @@ export class PageAppointmentsComponent extends BasePageComponent implements OnIn
   }
 
   // open modal window
-  openModal(body: any, header: any = null, footer: any = null, data: any = null) {
+  openModal(
+    body: any,
+    header: any = null,
+    footer: any = null,
+    data: any = null
+  ) {
     this.initForm(data);
 
     this.modal.open({
       body: body,
       header: header,
-      footer: footer
+      footer: footer,
     });
   }
 
@@ -79,15 +92,26 @@ export class PageAppointmentsComponent extends BasePageComponent implements OnIn
   // init form
   initForm(data: any) {
     this.appointmentForm = this.formBuilder.group({
-      img: [(data ? data.img : this.currentAvatar)],
-      name: [(data ? data.name : ''), Validators.required],
-      email: [(data ? data.email : ''), Validators.required],
-      date: [(data ? data.date : ''), Validators.required],
-      from: [(data ? data.fromTo.substring(0, (data.fromTo.indexOf('-') - 1)) : ''), Validators.required],
-      to: [(data ? data.fromTo.substring((data.fromTo.indexOf('-') + 2), data.fromTo.length) : ''), Validators.required],
-      number: [(data ? data.number : ''), Validators.required],
-      doctor: [(data ? data.doctor : ''), Validators.required],
-      injury: [(data ? data.injury : ''), Validators.required]
+      img: [data ? data.img : this.currentAvatar],
+      name: [data ? data.name : '', Validators.required],
+      email: [data ? data.email : '', Validators.required],
+      date: [data ? data.date : '', Validators.required],
+      from: [
+        data ? data.fromTo.substring(0, data.fromTo.indexOf('-') - 1) : '',
+        Validators.required,
+      ],
+      to: [
+        data
+          ? data.fromTo.substring(
+              data.fromTo.indexOf('-') + 2,
+              data.fromTo.length
+            )
+          : '',
+        Validators.required,
+      ],
+      number: [data ? data.number : '', Validators.required],
+      doctor: [data ? data.doctor : '', Validators.required],
+      injury: [data ? data.injury : '', Validators.required],
     });
   }
 
@@ -105,12 +129,12 @@ export class PageAppointmentsComponent extends BasePageComponent implements OnIn
 
   // edit appointment
   edit(row: any) {
-    this.openModal(this.modalBody, 'Add appointment', this.modalFooter, row);
+    this.openModal(this.modalBody, 'Edit operation', this.modalFooter, row);
   }
 
   // remove appointment
   remove(tableRow: any) {
-    this.appointments = this.appointments.filter(row => row !== tableRow);
+    this.appointments = this.appointments.filter((row) => row !== tableRow);
   }
 
   // add new appointment

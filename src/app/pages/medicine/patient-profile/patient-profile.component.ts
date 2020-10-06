@@ -10,9 +10,11 @@ import { IOption } from '../../../ui/interfaces/option';
 @Component({
   selector: 'page-patient-profile',
   templateUrl: './patient-profile.component.html',
-  styleUrls: ['./patient-profile.component.scss']
+  styleUrls: ['./patient-profile.component.scss'],
 })
-export class PagePatientProfileComponent extends BasePageComponent implements OnInit, OnDestroy {
+export class PagePatientProfileComponent
+  extends BasePageComponent
+  implements OnInit, OnDestroy {
   patientInfo: any;
   patientTimeline: any;
   patientForm: FormGroup;
@@ -31,40 +33,40 @@ export class PagePatientProfileComponent extends BasePageComponent implements On
     super(store, httpSv);
 
     this.pageData = {
-      title: 'Patient profile page',
+      title: 'Contractor Profile',
       breadcrumbs: [
         {
-          title: 'Medicine',
-          route: 'default-dashboard'
+          title: 'Contract',
+          route: 'default-dashboard',
         },
         {
-          title: 'Patients',
-          route: 'patients'
+          title: 'Agreements',
+          route: 'patients',
         },
         {
-          title: 'Dr. Sophie'
-        }
-      ]
+          title: 'Agent Sophie',
+        },
+      ],
     };
     this.gender = [
       {
         label: 'Male',
-        value: 'male'
+        value: 'male',
       },
       {
         label: 'Female',
-        value: 'female'
-      }
+        value: 'female',
+      },
     ];
     this.status = [
       {
         label: 'Approved',
-        value: 'approved'
+        value: 'approved',
       },
       {
         label: 'Pending',
-        value: 'pending'
-      }
+        value: 'pending',
+      },
     ];
     this.defaultAvatar = 'assets/content/anonymous-400.jpg';
     this.currentAvatar = this.defaultAvatar;
@@ -75,7 +77,11 @@ export class PagePatientProfileComponent extends BasePageComponent implements On
   ngOnInit() {
     super.ngOnInit();
 
-    this.getData('assets/data/patient-info.json', 'patientInfo', 'loadedDetect');
+    this.getData(
+      'assets/data/patient-info.json',
+      'patientInfo',
+      'loadedDetect'
+    );
     this.getData('assets/data/patient-timeline.json', 'patientTimeline');
     this.getData('assets/data/patient-billings.json', 'billings');
   }
@@ -102,7 +108,7 @@ export class PagePatientProfileComponent extends BasePageComponent implements On
       age: [data.age, Validators.required],
       id: [data.id, Validators.required],
       lastVisit: [data.lastVisit, Validators.required],
-      status: [data.status, Validators.required]
+      status: [data.status, Validators.required],
     });
 
     // detect form changes

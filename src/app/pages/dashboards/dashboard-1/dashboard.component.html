@@ -1,3 +1,5 @@
+<!-- 1st Column Grid -->
+
 <div class="row">
   <div class="col col-12 col-md-6 col-xl-3">
     <tc-card [tcBgColor]="'#fbfbfb'" class="animated fadeInUp delay-01s">
@@ -80,10 +82,20 @@
   </div>
 </div>
 
+<!-- End of 1st Column Grid -->
+
+<!-- Oil Survey Data -->
 <tc-card [title]="'Oil survey'">
-  <div echarts [options]="hsOptions" class="chat-container container-h-400"></div>
+  <div
+    echarts
+    [options]="hsOptions"
+    class="chat-container container-h-400"
+  ></div>
 </tc-card>
 
+<!-- End of Oil Survey Data -->
+
+<!-- 2 Column Grid -->
 <div class="row">
   <div class="col col-12 col-md-6">
     <tc-card>
@@ -103,24 +115,44 @@
     </tc-card>
   </div>
 
+  <!-- End of 2 Column Grid -->
+
+  <!-- Bar Chart -->
+
   <div class="col col-12 col-md-4">
     <tc-card [title]="'Quarterly Earnings'">
-      <div echarts [options]="paOptions" class="chat-container container-h-300"></div>
+      <div
+        echarts
+        [options]="paOptions"
+        class="chat-container container-h-300"
+      ></div>
     </tc-card>
   </div>
 
   <div class="col col-12 col-md-4">
     <tc-card [title]="'Operations'">
-      <div echarts [options]="pgOptions" class="chat-container container-h-300"></div>
+      <div
+        echarts
+        [options]="pgOptions"
+        class="chat-container container-h-300"
+      ></div>
     </tc-card>
   </div>
 
   <div class="col col-12 col-md-4">
-    <tc-card [title]="'Lifitings'">
-      <div echarts [options]="dOptions" class="chat-container container-h-300"></div>
+    <tc-card [title]="'Liftings'">
+      <div
+        echarts
+        [options]="dOptions"
+        class="chat-container container-h-300"
+      ></div>
     </tc-card>
   </div>
 </div>
+
+<!-- End of Bar Chart -->
+
+<!-- New Operations Card -->
 
 <tc-card [title]="'New Operations'" class="mb-0">
   <tc-table [rows]="appointments" [hovered]="true" [pagination]="true">
@@ -129,36 +161,74 @@
         <tc-avatar [src]="value"></tc-avatar>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Name'" [columnName]="'name'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Name'"
+      [columnName]="'name'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <strong>{{ value }}</strong>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Email'" [columnName]="'email'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Email'"
+      [columnName]="'email'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <span class="nowrap" [tcColor]="'#336cfb'">
-          <tc-icon [iconClass]="'icofont-ui-email'" [tcFontSize]="16" [padding]="0" class="mr-1"></tc-icon> {{ value }}
+          <tc-icon
+            [iconClass]="'icofont-ui-email'"
+            [tcFontSize]="16"
+            [padding]="0"
+            class="mr-1"
+          ></tc-icon>
+          {{ value }}
         </span>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Date'" [columnName]="'date'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Date'"
+      [columnName]="'date'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <span class="nowrap" [tcColor]="'#a5a5a5'">{{ value }}</span>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Visit time'" [columnName]="'fromTo'" [enableSorting]="true">
+    <tc-table-col
+      [columnTitle]="'Visit time'"
+      [columnName]="'fromTo'"
+      [enableSorting]="true"
+    >
       <ng-template #tableTDTemplate let-value>
         <span class="nowrap" [tcColor]="'#a5a5a5'">{{ value }}</span>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Number'" [columnName]="'number'">
+    <tc-table-col [columnTitle]="'Contact'" [columnName]="'number'">
       <ng-template #tableTDTemplate let-value>
         <span class="nowrap" [tcColor]="'#336cfb'">
-          <tc-icon [iconClass]="'icofont-ui-cell-phone'" [tcFontSize]="16" [padding]="0" class="mr-1"></tc-icon> {{ value }}
+          <tc-icon
+            [iconClass]="'icofont-ui-cell-phone'"
+            [tcFontSize]="16"
+            [padding]="0"
+            class="mr-1"
+          ></tc-icon>
+          {{ value }}
         </span>
       </ng-template>
     </tc-table-col>
-    <tc-table-col [columnTitle]="'Doctor'" [columnName]="'doctor'" [enableSorting]="true"></tc-table-col>
-    <tc-table-col [columnTitle]="'Injury / Condition'" [columnName]="'injury'" [enableSorting]="true"></tc-table-col>
+    <tc-table-col
+      [columnTitle]="'Agent'"
+      [columnName]="'doctor'"
+      [enableSorting]="true"
+    ></tc-table-col>
+    <tc-table-col
+      [columnTitle]="'Expertise'"
+      [columnName]="'injury'"
+      [enableSorting]="true"
+    ></tc-table-col>
   </tc-table>
 </tc-card>
+
+<!-- End ofNew Operations Card -->
