@@ -71,7 +71,8 @@ input:-webkit-autofill {
 
   .tc-input-wrap {
     align-items: center;
-    background: map-get($_bg, default);
+    background-color: #cccccc;
+    // background: map-get($_bg, default);
     border: $_border-width $_border-style map-get($_border, default);
     border-radius: inherit;
     cursor: text;
