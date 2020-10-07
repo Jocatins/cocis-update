@@ -13,11 +13,11 @@ import * as PatientsActions from '../../../store/actions/patients.actions';
 import { TCModalService } from '../../../ui/services/modal/modal.service';
 
 @Component({
-  selector: 'page-patients',
-  templateUrl: './patients.component.html',
-  styleUrls: ['./patients.component.scss'],
+  selector: 'page-contractor',
+  templateUrl: './contractor.component.html',
+  styleUrls: ['./contractor.component.scss'],
 })
-export class PagePatientsComponent
+export class PageContractorComponent
   extends BasePageComponent
   implements OnInit, OnDestroy {
   patients: IPatient[];

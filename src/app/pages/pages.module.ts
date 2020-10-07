@@ -16,23 +16,16 @@ import { LayoutModule } from '../layout/layout.module';
 import { BasePageComponent } from './base-page';
 
 import { PageDashboardComponent } from './dashboards/dashboard-1';
-import { PageDoctorsComponent } from './medicine/doctors';
-import { PagePatientsComponent } from './medicine/patients';
-import { PageDoctorProfileComponent } from './medicine/doctor-profile';
-import { PagePaymentsComponent } from './medicine/payments';
-import { PageAppointmentsComponent } from './medicine/appointments';
-import { PageDepartmentsComponent } from './medicine/departments';
+import { PageContractorComponent } from './cocis/contractor';
+import { PagePaymentsComponent } from './cocis/payments';
+import { PageLiftingsOperationsComponent } from './cocis/liftingoperations';
+import { PageDepartmentsComponent } from './cocis/departments';
 import { Page404Component } from './page-404';
-import { PagePatientProfileComponent } from './medicine/patient-profile';
-import { PageInvoiceComponent } from './apps/service-pages/invoice';
-import { PagePricingComponent } from './apps/service-pages/pricing';
-import { PageTimelineComponent } from './apps/service-pages/timeline';
+import { PageContractorProfileComponent } from './cocis/contractor-profile';
 import { PageUserProfileComponent } from './apps/service-pages/user-profile';
 import { PageEditAccountComponent } from './apps/service-pages/edit-account';
-import { PageCalendarComponent } from './apps/service-pages/calendar';
 import { PageSignInComponent } from './apps/sessions/sign-in';
 import { PageSignUpComponent } from './apps/sessions/sign-up';
-import { PageSettingsComponent } from './settings';
 
 @NgModule({
   imports: [
@@ -57,23 +50,18 @@ import { PageSettingsComponent } from './settings';
     BasePageComponent,
     PageDashboardComponent,
     
-    PageDoctorsComponent,
-    PagePatientsComponent,
-    PageDoctorProfileComponent,
+    PageContractorComponent,
+    
     PagePaymentsComponent,
-    PageAppointmentsComponent,
+    PageLiftingsOperationsComponent,
     PageDepartmentsComponent,
     Page404Component,
-    PagePatientProfileComponent,
-    PageInvoiceComponent,
-    PagePricingComponent,
-    PageTimelineComponent,
+    PageContractorProfileComponent,
+    
     PageUserProfileComponent,
     PageEditAccountComponent,
-    PageCalendarComponent,
     PageSignInComponent,
     PageSignUpComponent,
-    PageSettingsComponent
   ],
   exports: [ ],
   entryComponents: [ ]

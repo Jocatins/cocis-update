@@ -14,11 +14,11 @@ import { TCModalService } from '../../../ui/services/modal/modal.service';
 import { IUser } from '../../../ui/interfaces/user';
 
 @Component({
-  selector: 'page-appointments',
-  templateUrl: './appointments.component.html',
-  styleUrls: ['./appointments.component.scss'],
+  selector: 'page-liftingoperations',
+  templateUrl: './liftingoperations.component.html',
+  styleUrls: ['./liftingoperations.component.scss'],
 })
-export class PageAppointmentsComponent
+export class PageLiftingsOperationsComponent
   extends BasePageComponent
   implements OnInit, OnDestroy {
   @ViewChild('modalBody') modalBody: ElementRef<any>;

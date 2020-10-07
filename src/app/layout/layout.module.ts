@@ -20,7 +20,6 @@ import { ActionsComponent } from './components/actions';
 import { LoginFormComponent } from './components/login-form';
 import { RegisterFormComponent } from './components/register-form';
 import { NavbarSkeletonComponent } from './components/navbar-skeleton';
-import { SettingsComponent } from './components/settings';
 
 @NgModule({
   imports: [
@@ -46,12 +45,12 @@ import { SettingsComponent } from './components/settings';
     LoginFormComponent,
     RegisterFormComponent,
     NavbarSkeletonComponent,
-    SettingsComponent
+    
   ],
   exports: [
     LoginFormComponent,
     RegisterFormComponent,
-    SettingsComponent
+    
   ]
 })
 export class LayoutModule { }

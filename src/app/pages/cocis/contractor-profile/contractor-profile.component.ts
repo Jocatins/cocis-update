@@ -8,11 +8,11 @@ import { HttpService } from '../../../services/http/http.service';
 import { IOption } from '../../../ui/interfaces/option';
 
 @Component({
-  selector: 'page-patient-profile',
-  templateUrl: './patient-profile.component.html',
-  styleUrls: ['./patient-profile.component.scss'],
+  selector: 'page-contractor-profile',
+  templateUrl: './contractor-profile.component.html',
+  styleUrls: ['./contractor-profile.component.scss'],
 })
-export class PagePatientProfileComponent
+export class PageContractorProfileComponent
   extends BasePageComponent
   implements OnInit, OnDestroy {
   patientInfo: any;

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageDoctorProfileComponent } from './doctor-profile.component';
+import { PageContractorComponent } from './contractor.component';
 
-describe('PageDoctorProfileComponent', () => {
-  let component: PageDoctorProfileComponent;
-  let fixture: ComponentFixture<PageDoctorProfileComponent>;
+describe('PageContractorComponent', () => {
+  let component: PageContractorComponent;
+  let fixture: ComponentFixture<PageContractorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageDoctorProfileComponent ]
+      declarations: [ PageContractorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PageDoctorProfileComponent);
+    fixture = TestBed.createComponent(PageContractorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
