@@ -15,7 +15,7 @@
     "icon": {
       "class": "icofont-pay"
     },
-    "routing": "appointments"
+    "routing": "lifting-operations"
   },
   
   {
@@ -23,7 +23,7 @@
     "icon": {
       "class": "icofont-paralysis-disability"
     },
-    "routing": "patients"
+    "routing": "contractors"
   },
   {
     "title": "Payments",

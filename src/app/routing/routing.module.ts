@@ -28,10 +28,10 @@ const VERTICAL_ROUTES: Routes = [
   { path: 'default-dashboard', component: PageDashboardComponent },
   { path: 'doctors', component: PageDoctorsComponent },
   { path: 'doctor-profile', component: PageDoctorProfileComponent },
-  { path: 'patients', component: PagePatientsComponent },
+  { path: 'contractors', component: PagePatientsComponent },
   { path: 'patient-profile', component: PagePatientProfileComponent },
   { path: 'payments', component: PagePaymentsComponent },
-  { path: 'appointments', component: PageAppointmentsComponent },
+  { path: 'lifting-operations', component: PageAppointmentsComponent },
   { path: 'departments', component: PageDepartmentsComponent },
 
 
