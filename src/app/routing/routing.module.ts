@@ -16,6 +16,8 @@ import { PageUserProfileComponent } from '../pages/apps/service-pages/user-profi
 import { PageEditAccountComponent } from '../pages/apps/service-pages/edit-account';
 import { PageSignInComponent } from '../pages/apps/sessions/sign-in';
 import { PageSignUpComponent } from '../pages/apps/sessions/sign-up';
+import { FileuploadsComponent } from '../pages/fileuploads/fileuploads.component';
+
 
 const VERTICAL_ROUTES: Routes = [
   { path: 'default-dashboard', component: PageDashboardComponent },
@@ -24,6 +26,8 @@ const VERTICAL_ROUTES: Routes = [
   { path: 'payments', component: PagePaymentsComponent },
   { path: 'lifting-operations', component: PageLiftingsOperationsComponent },
   { path: 'departments', component: PageDepartmentsComponent },
+  { path: 'fileuploads', component: FileuploadsComponent },
+
 
 
   { path: 'user-profile', component: PageUserProfileComponent },

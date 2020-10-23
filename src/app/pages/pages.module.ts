@@ -26,6 +26,7 @@ import { PageUserProfileComponent } from './apps/service-pages/user-profile';
 import { PageEditAccountComponent } from './apps/service-pages/edit-account';
 import { PageSignInComponent } from './apps/sessions/sign-in';
 import { PageSignUpComponent } from './apps/sessions/sign-up';
+import { FileuploadsComponent } from './fileuploads/fileuploads.component';
 
 @NgModule({
   imports: [
@@ -62,6 +63,7 @@ import { PageSignUpComponent } from './apps/sessions/sign-up';
     PageEditAccountComponent,
     PageSignInComponent,
     PageSignUpComponent,
+    FileuploadsComponent,
   ],
   exports: [ ],
   entryComponents: [ ]

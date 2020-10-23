@@ -31,6 +31,13 @@
       "class": "icofont-pay"
     },
     "routing": "payments"
+  },
+  {
+    "title": "Fileuploads",
+    "icon": {
+      "class": "icofont-pay"
+    },
+    "routing": "fileuploads"
   }
 
 ]
