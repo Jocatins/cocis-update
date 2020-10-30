@@ -16,7 +16,8 @@ import { PageUserProfileComponent } from '../pages/apps/service-pages/user-profi
 import { PageEditAccountComponent } from '../pages/apps/service-pages/edit-account';
 import { PageSignInComponent } from '../pages/apps/sessions/sign-in';
 import { PageSignUpComponent } from '../pages/apps/sessions/sign-up';
-import { FileuploadsComponent } from '../pages/fileuploads/fileuploads.component';
+import { FileuploadsComponent } from '../pages/fileuploads';
+import { TesterComponent } from '../pages/tester';
 
 
 const VERTICAL_ROUTES: Routes = [
@@ -26,7 +27,9 @@ const VERTICAL_ROUTES: Routes = [
   { path: 'payments', component: PagePaymentsComponent },
   { path: 'lifting-operations', component: PageLiftingsOperationsComponent },
   { path: 'departments', component: PageDepartmentsComponent },
-  { path: 'fileuploads', component: FileuploadsComponent },
+  { path: 'fileuploads', component: FileuploadsComponent},
+  // { path: 'tester', component: TesterComponent},
+
 
 
 
@@ -44,7 +47,7 @@ const PUBLIC_ROUTES: Routes = [
 export const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: '/vertical/default-dashboard',
+    redirectTo: 'default-dashboard',
     pathMatch: 'full'
   },
   {

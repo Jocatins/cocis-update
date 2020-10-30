@@ -38,6 +38,13 @@
       "class": "icofont-pay"
     },
     "routing": "fileuploads"
+  },
+  {
+    "title": "Tester",
+    "icon": {
+      "class": "icofont-pay"
+    },
+    "routing": "tester"
   }
 
 ]
