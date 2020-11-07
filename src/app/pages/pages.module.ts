@@ -27,7 +27,8 @@ import { PageEditAccountComponent } from './apps/service-pages/edit-account';
 import { PageSignInComponent } from './apps/sessions/sign-in';
 import { PageSignUpComponent } from './apps/sessions/sign-up';
 import { FileuploadsComponent } from './fileuploads/fileuploads.component';
-import { TesterComponent } from './tester/tester.component';
+import { PageSearchTableComponent } from './cocis/search-table';
+// import { TesterComponent } from './tester/tester.component';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 import {
@@ -40,7 +41,7 @@ import {
   EditService,
   ToolbarService,
 } from '@syncfusion/ej2-angular-grids';
-import { ProductDataService } from './tester/product-data.service';
+// import { ProductDataService } from './tester/product-data.service';
 // import {DateRangePickerModule} from '@syncfusion/ej2-angular-calendars'
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -53,7 +54,7 @@ import { BrowserModule } from '@angular/platform-browser';
     RouterModule,
     GridModule,
     PagerModule,
-    InMemoryWebApiModule.forRoot(ProductDataService),
+    // InMemoryWebApiModule.forRoot(ProductDataService),
 
     ChartsModule,
     NgxChartsModule,
@@ -84,7 +85,8 @@ import { BrowserModule } from '@angular/platform-browser';
     PageSignInComponent,
     PageSignUpComponent,
     FileuploadsComponent,
-    TesterComponent,
+    PageSearchTableComponent,
+    // TesterComponent,
   ],
   providers: [
     PageService,

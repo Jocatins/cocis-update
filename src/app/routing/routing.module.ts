@@ -17,7 +17,8 @@ import { PageEditAccountComponent } from '../pages/apps/service-pages/edit-accou
 import { PageSignInComponent } from '../pages/apps/sessions/sign-in';
 import { PageSignUpComponent } from '../pages/apps/sessions/sign-up';
 import { FileuploadsComponent } from '../pages/fileuploads';
-import { TesterComponent } from '../pages/tester';
+import { PageSearchTableComponent } from '../pages/cocis/search-table';
+
 
 
 const VERTICAL_ROUTES: Routes = [
@@ -28,7 +29,8 @@ const VERTICAL_ROUTES: Routes = [
   { path: 'lifting-operations', component: PageLiftingsOperationsComponent },
   { path: 'departments', component: PageDepartmentsComponent },
   { path: 'fileuploads', component: FileuploadsComponent},
-  // { path: 'tester', component: TesterComponent},
+  { path: 'search-table', component: PageSearchTableComponent },
+
 
 
 
@@ -47,7 +49,7 @@ const PUBLIC_ROUTES: Routes = [
 export const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: 'default-dashboard',
+    redirectTo: '/vertical/default-dashboard',
     pathMatch: 'full'
   },
   {
