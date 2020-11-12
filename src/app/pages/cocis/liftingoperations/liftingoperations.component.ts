@@ -21,8 +21,8 @@ import { IUser } from '../../../ui/interfaces/user';
 export class PageLiftingsOperationsComponent
   extends BasePageComponent
   implements OnInit, OnDestroy {
-  @ViewChild('modalBody') modalBody: ElementRef<any>;
-  @ViewChild('modalFooter') modalFooter: ElementRef<any>;
+  @ViewChild('modalBody', { static: true }) modalBody: ElementRef<any>;
+  @ViewChild('modalFooter', { static: true }) modalFooter: ElementRef<any>;
 
   appointments: any[];
   appointmentForm: FormGroup;

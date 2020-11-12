@@ -66,7 +66,7 @@ export class TCSelectComponent implements OnInit, ControlValueAccessor {
 
   @Output() valueSelected: EventEmitter<any | any[]>;
 
-  @ContentChild('optionTemplate') optionTpl: TemplateRef<any>;
+  @ContentChild('optionTemplate', /* TODO: add static flag */ {}) optionTpl: TemplateRef<any>;
 
   innerValue: string | string[];
   selectedOptions: IOption[];

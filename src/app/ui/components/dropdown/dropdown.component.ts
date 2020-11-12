@@ -10,8 +10,8 @@ import { TCDropdownContentComponent } from './content/content.component';
 })
 export class TCDropdownComponent implements OnInit {
   // get children components
-  @ContentChild(TCDropdownButtonComponent) public dropdownButton: TCDropdownButtonComponent;
-  @ContentChild(TCDropdownContentComponent) public dropdownContent: TCDropdownContentComponent;
+  @ContentChild(TCDropdownButtonComponent, /* TODO: add static flag */ {}) public dropdownButton: TCDropdownButtonComponent;
+  @ContentChild(TCDropdownContentComponent, /* TODO: add static flag */ {}) public dropdownContent: TCDropdownContentComponent;
 
   @HostBinding('class.tc-dropdown') true;
   @HostBinding('class.opened') get getOpened() {

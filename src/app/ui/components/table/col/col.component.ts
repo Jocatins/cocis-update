@@ -7,8 +7,8 @@ import { TCTableComponent } from '../table.component';
   styleUrls: ['./col.component.scss']
 })
 export class TCTableColComponent implements OnInit {
-  @ContentChild('tableTDTemplate') tdTemplate: TemplateRef<any>;
-  @ContentChild('headerBodyTemplate') headerTemplate: TemplateRef<any>;
+  @ContentChild('tableTDTemplate', /* TODO: add static flag */ {}) tdTemplate: TemplateRef<any>;
+  @ContentChild('headerBodyTemplate', /* TODO: add static flag */ {}) headerTemplate: TemplateRef<any>;
 
   @Input() columnTitle: string;
   @Input() columnName: string;
