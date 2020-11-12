@@ -7,6 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "postinstall": "ngcc",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -40,9 +41,9 @@
     "ng-fullcalendar": "1.7.1",
     "ng2-charts": "1.6.0",
     "ng2-dragula": "2.1.1",
+    "ngx-bootstrap": "^6.2.0",
     "ngx-echarts": "4.1.0",
     "ngx-malihu-scrollbar": "7.0.0",
-    "node-sass": "^4.14.1",
     "rxjs": "6.6.3",
     "tslib": "1.9.0",
     "web-animations-js": "2.3.1",
